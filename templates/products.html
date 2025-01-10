@@ -2,4 +2,26 @@
 
 {%block contenuto%}
 <h1>Products</h1>
+
+<table>
+    <tr>
+        <th>ProductID</th>
+        <th>ProductName</th>
+        <th>SupplierID</th>
+        <th>CategoryID</th>
+        <th>Unit</th>
+        <th>Price</th>
+    </tr>
+{%for prodotto in prodotti%}
+    <tr>
+        <td>{{prodotto[0]}}</td>
+        <td>{{prodotto[1]}}</td>
+        <td>{{prodotto[2]}}</td>
+        <td><a href="{{url_for('category', id=prodotto[3])}}">{{prodotto[3]}}</a></td>
+        <td>{{prodotto[4]}}</td>
+    </tr>
+{%endfor%}
+</table>
+
+
 {%endblock%}

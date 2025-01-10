@@ -19,4 +19,8 @@ def homePage():
 def products():
     return render_template('products.html', titolo="Products")
 
+@app.route("/category/<id>")
+def category():
+    return render_template('catgory.html')
+
 app.run()
