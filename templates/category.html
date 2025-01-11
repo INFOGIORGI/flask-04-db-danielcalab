@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{%block contenuto%}
+<h1>Products</h1>
+
+<table>
+    <tr>
+        <th>CategoryID</th>
+        <th>CategoryName</th>
+        <th>Description</th>
+    </tr>
+{%for riga in dati%}
+    <tr>
+        <td>{{riga[0]}}</td>
+        <td>{{riga[1]}}</td>
+        <td>{{riga[2]}}</td>
+    </tr>
+{%endfor%}
+</table>
+
+
+{%endblock%}
